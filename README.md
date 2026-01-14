@@ -8,7 +8,7 @@
 
 Automation bot that uses:
 - NDI video stream for vision (PC2 reads frames)
-- Makcu USB HID for mouse control (physically attached to PC1)
+- Makcu USB HID for mouse control (physically attached to PC1&2 + mouse)
 
 ## Quickstart
 - Install deps: `pip install -r requirements.txt`
