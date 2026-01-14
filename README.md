@@ -1,8 +1,8 @@
 # Requirements
 
-2 PCs on the same LAN
-Makcu - https://www.makcu.com/en
-NDI and Duet Night Abyss installed on PC1 - https://ndi.video/
+- 2 PCs on the same LAN
+- Makcu - https://www.makcu.com/en
+- NDI and Duet Night Abyss installed on PC1 - https://ndi.video/
 
 # DNA-bot-makcu
 
