@@ -1,0 +1,4 @@
+# Optional: training only (not required to run the bot)
+# Install into your venv when you want to train:
+#   pip install -r cursor_ml/requirements_ml.txt
+ultralytics>=8.0,<9.0

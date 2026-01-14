@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs / recordings / datasets (can be huge / personal)
+*.log
+*.jsonl
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.zip
+
+# Project-specific generated/captured data
+**/captures/
+**/capture/
+**/recordings/
+**/frames/
+**/calibration_frames/
+**/cursor_ml/out/
+**/cursor_ml/runs/
+**/cursor_ml/**/*.pt
+**/cursor_ml/**/*.onnx
+
+# ML training inputs can include private screenshots/crops
+**/cursor_ml/data/backgrounds/
+**/cursor_ml/data/cursor_templates/
+
+# Sessions can include large or personal logs
+data/session*/

@@ -1,0 +1,113 @@
+{
+  "source": "compute_calibration_from_snaps.py",
+  "ts": "2026-01-07 10:27:42",
+  "mode": "sequential",
+  "samples": [
+    {
+      "pre": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_001_1767755666215.png",
+      "post": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_002_1767755699745.png",
+      "pre_xy": [
+        1060,
+        865
+      ],
+      "post_xy": [
+        1160,
+        965
+      ],
+      "move_counts": [
+        100,
+        100
+      ],
+      "delta_px": [
+        100,
+        100
+      ]
+    },
+    {
+      "pre": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_002_1767755699745.png",
+      "post": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_003_1767755750828.png",
+      "pre_xy": [
+        1160,
+        965
+      ],
+      "post_xy": [
+        1160,
+        915
+      ],
+      "move_counts": [
+        0,
+        -50
+      ],
+      "delta_px": [
+        0,
+        -50
+      ]
+    },
+    {
+      "pre": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_003_1767755750828.png",
+      "post": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_004_1767755812283.png",
+      "pre_xy": [
+        1160,
+        915
+      ],
+      "post_xy": [
+        960,
+        915
+      ],
+      "move_counts": [
+        -200,
+        0
+      ],
+      "delta_px": [
+        -200,
+        0
+      ]
+    },
+    {
+      "pre": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_004_1767755812283.png",
+      "post": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_005_1767755892893.png",
+      "pre_xy": [
+        960,
+        915
+      ],
+      "post_xy": [
+        459,
+        316
+      ],
+      "move_counts": [
+        -500,
+        -600
+      ],
+      "delta_px": [
+        -501,
+        -599
+      ]
+    },
+    {
+      "pre": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_005_1767755892893.png",
+      "post": "c:\\okDNA\\DNA-AI\\MissionTypes\\Defence\\Wedge65\\MakcuCommands\\calibration_frames\\snap_006_1767755950225.png",
+      "pre_xy": [
+        459,
+        316
+      ],
+      "post_xy": [
+        1260,
+        315
+      ],
+      "move_counts": [
+        800,
+        0
+      ],
+      "delta_px": [
+        801,
+        -1
+      ]
+    }
+  ],
+  "samples_x": 4,
+  "samples_y": 3,
+  "px_per_count_x": 1.0006249999999999,
+  "px_per_count_y": 1.0,
+  "sign_x": 1,
+  "sign_y": 1
+}

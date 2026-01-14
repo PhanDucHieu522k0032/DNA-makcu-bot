@@ -1,0 +1,16 @@
+# Avoid massive diffs for binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.bmp binary
+*.webp binary
+*.mp4 binary
+*.avi binary
+*.onnx binary
+*.pt binary
+
+# Normalize text
+* text=auto eol=lf
+
+# Keep PowerShell scripts readable on Windows
+*.ps1 text eol=crlf
