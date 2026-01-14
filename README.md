@@ -1,3 +1,9 @@
+# Requirements
+
+2 PCs on the same LAN
+Makcu - https://www.makcu.com/en
+NDI and Duet Night Abyss installed on PC1 - https://ndi.video/
+
 # DNA-bot-makcu
 
 Automation bot that uses:
@@ -13,3 +19,7 @@ Automation bot that uses:
 ## Layout
 - `main.py`: bot entrypoint
 - `MissionTypes/Defence/Wedge65/MakcuCommands/`: Makcu helpers, scripts, cursor templates, and offline training tools
+
+# Demo
+
+https://youtu.be/gapBsAfUgH0
