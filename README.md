@@ -1,4 +1,4 @@
-# Bot-control-Makcu
+# DNA-bot-makcu
 
 Automation bot that uses:
 - NDI video stream for vision (PC2 reads frames)
