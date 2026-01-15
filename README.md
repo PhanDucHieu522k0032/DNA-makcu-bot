@@ -19,6 +19,20 @@ Automation bot that uses:
 - NDI video stream for vision (PC2 reads frames)
 - Makcu USB HID for mouse control (physically attached to PC1&2 + mouse)
 
+## Project status
+This project is **under active development**.
+
+Expect breaking changes, incomplete features, and occasional instability while the core loop and detection logic are evolving.
+
+## Known issues / limitations
+- **Bot view can be laggy**: the vision loop depends on the NDI stream + decoding + CV processing, which can introduce noticeable latency.
+- Detection is currently optimized for specific UI patterns/templates; results can degrade when the game UI, resolution, or background changes significantly.
+
+## Roadmap
+- Add more mission types and play modes beyond the current Wedge/Defence flow.
+- Improve robustness of UI/cursor detection across different scenes and backgrounds.
+- Better configuration + profiles per mode (templates, timings, calibration).
+
 ## Quickstart
 - Install deps: `pip install -r requirements.txt`
 - Ensure you have NDI runtime installed and an NDI source running.

@@ -879,8 +879,10 @@ async def main():
     ds_logger = DatasetLogger(args.log_dir, enabled=bool(args.log_dir), save_frames=bool(args.log_frames))
 
     # Cursor templates (optional). You can capture at runtime with key 't'.
-    script_dir = os.path.dirname(__file__)
-    cursor_folder = ensure_cursor_templates_folder(script_dir)
+    # NOTE: After moving `main.py` to repo root, the runtime assets live under MakcuCommands.
+    root_dir = os.path.dirname(__file__)
+    assets_dir = MAKCUCOMMANDS_DIR
+    cursor_folder = ensure_cursor_templates_folder(assets_dir)
     cursor_template_path = args.cursor_template
     if not cursor_template_path:
         cursor_template_path = cursor_folder
@@ -919,7 +921,7 @@ async def main():
             print("[WARN] Failed to start stdin reader; terminal command input disabled")
 
     # Snapshot calibration state
-    calib_dir = os.path.join(script_dir, "calibration_frames")
+    calib_dir = os.path.join(root_dir, "calibration_frames")
     os.makedirs(calib_dir, exist_ok=True)
     calib_idx = 0
     calib_pre_cursor = None  # (x,y)
@@ -932,7 +934,13 @@ async def main():
     # Optional: load km.move calibration (pixels-per-count + sign) if available.
     km_calib_path = (args.km_calibration or "").strip()
     if not km_calib_path:
-        km_calib_path = os.path.join(script_dir, "makcu_calibration.json")
+        # Prefer the MakcuCommands calibration file (tracked with the mode assets).
+        cand = os.path.join(assets_dir, "makcu_calibration.json")
+        if os.path.exists(cand):
+            km_calib_path = cand
+        else:
+            # Backwards-compatible fallback for older layouts.
+            km_calib_path = os.path.join(root_dir, "makcu_calibration.json")
     km_calib_path = os.path.abspath(km_calib_path)
 
     km_calibration = mh.load_km_calibration(km_calib_path)
@@ -2156,7 +2164,7 @@ async def main():
                 if not calib_samples_x and not calib_samples_y and not km_calibration:
                     print('[CAL] No calibration samples to write yet')
                 else:
-                    out_path = os.path.join(script_dir, 'makcu_calibration.json')
+                    out_path = os.path.join(MAKCUCOMMANDS_DIR, 'makcu_calibration.json')
                     payload = {}
                     if km_calibration:
                         payload.update(km_calibration)
