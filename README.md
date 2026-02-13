@@ -10,7 +10,7 @@ All issues and consequences arising from the use of this software are not relate
 ## Requirements
 
 - 2 PCs on the same LAN
-- Makcu - https://www.makcu.com/en
+- Makcu(esp32-s3) - https://www.makcu.com/en
 - NDI and Duet Night Abyss (DNA) installed on PC1 - https://ndi.video/
 
 ## DNA-bot-makcu
