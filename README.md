@@ -57,6 +57,41 @@ Expect breaking changes, incomplete features, and occasional instability while t
 - Improve robustness of UI/cursor detection across different scenes and backgrounds.
 - Better configuration + profiles per mode (templates, timings, calibration).
 
+## 🏗️ System Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        PC1 (Target)                         │
+│  ┌──────────────┐         ┌─────────────────────────────┐  │
+│  │ NDI Source   │────────▶│  Game/Application UI        │  │
+│  │ (Broadcast)  │  LAN    │                             │  │
+│  └──────────────┘         └─────────────────────────────┘  │
+│         ▲                              ▲                     │
+│         │                              │ Mouse Input         │
+│         │ NDI Stream                   │ (USB HID)           │
+└─────────┼──────────────────────────────┼─────────────────────┘
+          │                              │
+          │                      ┌───────┴────────┐
+          │                      │   ESP32-S3     │
+          │                      │   (Makcu)      │
+          │                      │  USB HID Mode  │
+          │                      └───────▲────────┘
+          │                              │
+          │                              │ Serial/USB Commands
+┌─────────┼──────────────────────────────┼─────────────────────┐
+│         │            PC2 (Vision & Control)     │             │
+│  ┌──────▼────────┐    ┌──────────────┐  ┌──────┴─────────┐  │
+│  │  NDI Receiver │───▶│  OpenCV      │─▶│  Makcu Driver  │  │
+│  │  (Decode)     │    │  Detection   │  │  (Commands)    │  │
+│  └───────────────┘    └──────────────┘  └────────────────┘  │
+│                            │                                  │
+│                       ┌────▼────────┐                         │
+│                       │ State       │                         │
+│                       │ Machine     │                         │
+│                       └─────────────┘                         │
+└─────────────────────────────────────────────────────────────┘
+```
+
 ## Demo
 
 https://youtu.be/gapBsAfUgH0
