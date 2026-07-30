@@ -19,10 +19,6 @@ Automation bot that uses:
 - NDI video stream for vision (PC2 reads frames)
 - Makcu USB HID for mouse control (physically attached to PC1&2 + mouse)
 
-## Project status
-This project is **under active development**.
-
-Expect breaking changes, incomplete features, and occasional instability while the core loop and detection logic are evolving.
 
 ## Known issues / limitations
 - **Bot view can be laggy**: the vision loop depends on the NDI stream + decoding + CV processing, which can introduce noticeable latency.
