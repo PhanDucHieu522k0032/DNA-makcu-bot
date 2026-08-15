@@ -39,11 +39,6 @@ Automation bot that uses:
 - `main.py`: bot entrypoint
 - `MissionTypes/Defence/Wedge65/MakcuCommands/`: Makcu helpers, scripts, cursor templates, and offline training tools
 
-## Project status
-This project is **under active development**.
-
-Expect breaking changes, incomplete features, and occasional instability while the core loop and detection logic are evolving.
-
 ## Known issues / limitations
 - **Bot view can be laggy**: the vision loop depends on the NDI stream + decoding + CV processing, which can introduce noticeable latency.
 - Detection is currently optimized for specific UI patterns/templates; results can degrade when the game UI, resolution, or background changes significantly.
