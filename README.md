@@ -43,11 +43,6 @@ Automation bot that uses:
 - **Bot view can be laggy**: the vision loop depends on the NDI stream + decoding + CV processing, which can introduce noticeable latency.
 - Detection is currently optimized for specific UI patterns/templates; results can degrade when the game UI, resolution, or background changes significantly.
 
-## Roadmap
-- Add more mission types and play modes beyond the current Wedge/Defence flow.
-- Improve robustness of UI/cursor detection across different scenes and backgrounds.
-- Better configuration + profiles per mode (templates, timings, calibration).
-
 ## 🏗️ System Architecture
 
 ```
